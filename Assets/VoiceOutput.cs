@@ -7,9 +7,12 @@ using UnityEngine.Windows.Speech;
 
 public class VoiceMovements : MonoBehaviour
 {
-    public AudioSource AudioPlay.A_1();
+    public AudioSource A_1;
     public KeywordRecognizer keywordRecognizer;
     public Dictionary<string, Action> actions = new Dictionary<string, Action>();//t�r�
+
+string [] keywords = {"A", "B", "C", "D"};
+
 
     public void RecognizePart()
     {
@@ -18,16 +21,16 @@ public class VoiceMovements : MonoBehaviour
         keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray());
         keywordRecognizer.OnPhraseRecognized += RecognizedSpeech;
         keywordRecognizer.Start();
-        string [] keywords = {"A", "B", "C", "D"};
+        //keywords = {"A", "B", "C", "D"};
         //string bla = "blabla";
-
+        string.
         //char[] character = bla.ToArray();
 
     }
 
     public void RecognizedSpeech(PhraseRecognizedEventArgs speech)
     {
-        if (keywords.ContainsKey(speech.text))
+        if (keywords.Find(speech.text))
         {
             if (keywords = A)
             {
